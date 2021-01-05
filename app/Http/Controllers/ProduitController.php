@@ -34,7 +34,7 @@ class ProduitController extends Controller
         $produit->reference = $request->referenceproduit;
         $produit->quantite = $request->quantiteproduit;
         $produit->prix = $request->prixproduit;
-        $produit->photo = $request->photoproduit;
+        // $produit->photo = $request->photoproduit;
         $produit->categorie_id = $request->id_categorie;
         $leproduit = $produit->save();
         return Redirect('/produit/getall');

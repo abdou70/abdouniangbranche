@@ -1,6 +1,5 @@
 @extends('layouts.template')
 @include('layouts.nav')
-
 @section('content')
 <div class="row mt">
           <div class="col-lg-12">
@@ -9,9 +8,9 @@
                     @if (isset($confirmation))
 
                         @if($confirmation ==1)
-                          <div class="alert alert-success">Compte ajouté</div>
+                          <div class="alert alert-success">Categorie ajouté</div>
                         @else
-                           <div class="alert alert-danger">Compte non ajouter </div>
+                           <div class="alert alert-danger">Categorie non ajouter </div>
                         @endif
 
                     @endif
@@ -29,7 +28,7 @@
                         </div>
 
                     <div class="form-group">
-                    <input type="submit" name="envoyer" id="envoyer" value="Enregistrer" class="btn btn-success"/>
+                    <input type="submit" name="envoyer" id="envoyer" value="Enregistrer" class="btn btn-theme" data-toggle="modal"/>
                     <a class="btn btn-danger" href="{{ route('getallcategorie') }}">Annuler</a>
                     </div>
                     </form>

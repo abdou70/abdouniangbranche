@@ -114,8 +114,8 @@
                            <td> <img src="{{ $produit->photo }}" width="50" height="50"></td>
                            <td>{{ $produit->categorie_id }}</td>
                            <td>{{ $produit->prix }}</td>
-                           <td><a class="btn btn-theme" data-toggle="modal" 
-                            data-target="#exampleModal" href={{ route('editproduit' , ['id' => $produit->id]) }}>Editer</a></td>
+                           <td><a class="btn btn-theme" 
+                             href={{ route('editproduit' , ['id' => $produit->id]) }}>Editer</a></td>
                            <td><a class="btn btn-danger" href={{ route('deleteproduit' , ['id' => $produit->id]) }} onclick="return confirm(Voulez-vous supprimer le client?)";>Supprimer</a></td>
                        </tr>
                        @endforeach

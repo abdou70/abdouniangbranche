@@ -1,12 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.template')
+@include('layouts.nav')
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Formulaire D'enregistrement de Client</div>
-
-                <div class="card-body">
+<div class="row mt">
+    <div class="col-lg-12">
+      <h4><i class="fa fa-angle-right"></i>{{ __('Editer Produit') }}</h4>
+        <div class="form-panel">
                     @if (isset($confirmation))
 
                         @if($confirmation ==1)
@@ -43,11 +41,11 @@
                     <label for="prixproduit" class="control-label"> Prix Produit :</label>
                     <input type="tel" name="prixproduit" id="prixproduit" value="{{ $produit->prix }}" class="form-control" />
                     </div>
-                    
+                    {{-- 
                     <div class="form-group">
                     <label for="datenais" class="control-label"> Photo :</label>
                     <input type="text" name="photoproduit" id="photoproduit" value="{{ $produit->photo }}" class="form-control" />
-                    </div>
+                    </div> --}}
  
                     <div class="form-group">
                     <label for="id_categorie" class="control-label"> ID-Categorie :</label>
@@ -55,14 +53,12 @@
                     </div>
               
                     <div class="form-group">
-                    <input type="submit" name="envoyer" id="envoyer" value="Enregistrer" class="btn btn-success"/>
+                    <input type="submit" name="envoyer" id="envoyer" value="Enregistrer" class="btn btn-theme" data-toggle="modal"/>
                     <a class="btn btn-danger" href={{ route('getallproduit') }}>Annuler</a>
                     </div>
                     </form>
-                   </div>
                 </div>
             </div>
-        </div>
-    </div>
+            <!-- /form-panel -->
 </div>
 @endsection

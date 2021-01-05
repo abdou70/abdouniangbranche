@@ -75,8 +75,8 @@
                        <tr>
                            <td>{{ $categorie->id }}</td>
                            <td>{{ $categorie->libelle }}</td>
-                           <td><a class="btn btn-theme" data-toggle="modal" 
-                           data-target="#exampleModal" href="{{ route('editcategorie' , ['id' => $categorie->id]) }}" >Editer</a></td>
+                           <td><a class="btn btn-theme"  
+                            href="{{ route('editcategorie' , ['id' => $categorie->id]) }}" >Editer</a></td>
                           <td><a class="btn btn-danger" href="{{ route('deletecategorie' , ['id' => $categorie->id]) }}" onclick="return confirm('Voulez-vous vraiement supprimer?')" >Supprimer</a></td>
                         </tr>
                        @endforeach
