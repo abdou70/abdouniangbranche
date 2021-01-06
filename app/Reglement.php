@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Reglement extends Model
 {
     protected $fillable = [
-        'typeReglement',
+        'typereglement',
     
     ]; 
     public function commandes()

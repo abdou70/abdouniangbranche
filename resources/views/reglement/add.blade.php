@@ -1,16 +1,16 @@
 @extends('layouts.template')
 @include('layouts.nav')
 @section('content')
-<div class="row mt">
+{{-- <div class="row mt">
     <div class="col-md-12 P-1">
         <a type="button" class="btn btn-theme" href="{{ route('getallcategorie') }}">
                         liste des Categories
         </a>
     </div>
-</div>
+</div> --}}
 <div class="row mt">
           <div class="col-lg-12">
-            <h4><i class="fa fa-angle-right"></i>{{ __('Ajouter categorie') }}</h4>
+            <h4><i class="fa fa-angle-right"></i>{{ __('Ajouter reglement') }}</h4>
               <div class="form-panel">
                     @if (isset($confirmation))
 
@@ -21,11 +21,11 @@
                         @endif
 
                     @endif
-                    <form method="POST" action="{{ route('ajoutercategorie') }}">
+                    <form method="POST" action="{{ route('ajouterreglement')}}">
                         @csrf
                    <div class="form-group">
-                    <label for="nomcategorie" class="control-label"> Nom Categorie :</label>
-                    <input type="text" name="nomcategorie" id="nomcategorie" class="form-control" />
+                    <label for="nomreglement" class="control-label"> Type_payement :</label>
+                    <input type="text" name="nomreglement" id="nomreglement" class="form-control" />
                     </div>
                          
                     <div class="form-group">

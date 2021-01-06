@@ -60,3 +60,13 @@ Route::get('/client/searchNom/{search}','ClientsController@index')->name('search
 //change password
 Route::put('update-password','PasswordController@updatePassword')->name('update-password');
 Route::get('set-password','PasswordController@setPassword')->name('set-password');
+
+//Reglement
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/reglement/add', 'ReglementController@add')->name('addreglement');
+Route::get('/reglement/edit/{id}', 'ReglementController@edit')->name('editreglement');
+Route::post('/reglement/update', 'ReglementController@update')->name('updatereglement');
+Route::post('/reglement/ajouter', 'ReglementController@ajouter')->name('ajouterreglement');
+Route::get('/reglement/delete/{id}', 'ReglementController@delete')->name('deletereglement');
+Route::get('/reglement/getall', 'ReglementController@getAll')->name('getallreglement');
+

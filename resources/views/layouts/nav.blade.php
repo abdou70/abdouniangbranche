@@ -120,6 +120,16 @@
               <li><a href="#">Enregistrer Client</a></li> 
             </ul>
           </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-dollar"></i>
+              <span>Reglements</span>
+              </a>
+            <ul class="sub">
+              <li><a href="{{ route('addreglement')}}">Enregistrer un reglement</a></li>
+              <li><a href="{{ route('getallreglement')}}">Types_Reglement</a></li> 
+            </ul>
+          </li>
         </ul>
         <!-- sidebar menu end-->
       </div>
